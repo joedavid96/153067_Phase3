@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/hibernate-core-3.6.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/hibernate-entitymanager-3.6.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/JoePDF/Module 2/Module 2/JPA With Hibernate/Demos/Demos/JPAStarter/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
