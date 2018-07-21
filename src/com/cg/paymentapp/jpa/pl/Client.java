@@ -115,10 +115,10 @@ public class Client {
 			Customer c = service.showBalance(mobileNo);
 			System.out.println("Balance in Your Wallet : " + c.getWallet().getBalance() + "\n");
 		} catch (InvalidInputException e) {
-			// e.printStackTrace();
+			 //e.printStackTrace();
 			System.out.println("Something went WRONG : Reason : " + e.getMessage() + "\n");
 		} catch (Exception e) {
-			// e.printStackTrace();
+			 //e.printStackTrace();
 			System.out.println("Something went WRONG: Please Try Again After Some Time. Thanks.\n");
 		}
 	}
@@ -140,10 +140,10 @@ public class Client {
 				System.out.println("Balance in A/C: " + c.getWallet().getBalance() + "\n");
 
 			} catch (InvalidInputException e) {
-				// e.printStackTrace();
+				 //e.printStackTrace();
 				System.out.println("Something went WRONG : Reason : " + e.getMessage() + "\n");
 			} catch (Exception e) {
-				// e.printStackTrace();
+				 //e.printStackTrace();
 				System.out.println("Something went WRONG: Please Try Again After Some Time. Thanks.\n");
 			}
 		} else {
@@ -167,13 +167,13 @@ public class Client {
 				System.out.println("Balance in A/C: " + c.getWallet().getBalance() + "\n");
 
 			} catch (InvalidInputException e) {
-				// e.printStackTrace();
+				//e.printStackTrace();
 				System.out.println("Something went WRONG : Reason : " + e.getMessage() + "\n");
 			} catch (InsufficientBalanceException e) {
-				// e.printStackTrace();
+				 //e.printStackTrace();
 				System.out.println("Something went WRONG : Reason : " + e.getMessage() + "\n");
 			} catch (Exception e) {
-				// e.printStackTrace();
+				 //e.printStackTrace();
 				System.out.println("Something went WRONG: Please Try Again After Some Time. Thanks.\n");
 			}
 		} else {
@@ -222,17 +222,22 @@ public class Client {
 		System.out.println("\nEnter Phone Number: ");
 		String mobileNo = sc.next();
 		try {
+			int count = 0;
 			List<String> l = service.transactions(mobileNo);
 			@SuppressWarnings("rawtypes")
 			Iterator it = l.iterator();
 			while (it.hasNext()) {
 				System.out.println(it.next());
+				count++;
+				if(count>10) {
+					break;
+				}
 			}
 		} catch (InvalidInputException e) {
-			// e.printStackTrace();
+			 //e.printStackTrace();
 			System.out.println("Something went WRONG : Reason : " + e.getMessage() + "\n");
 		} catch (Exception e) {
-			// e.printStackTrace();
+			 //e.printStackTrace();
 			System.out.println("Something went WRONG: Please Try Again After Some Time. Thanks.\n");
 		}
 	}

@@ -21,12 +21,8 @@ public class WalletRepoImpl implements WalletRepo {
 	@Override
 	public boolean save(Customer customer) {
 		EntityManager entityManager1 = null;
-		EntityManager entityManager2 = null;
 		if (entityManager1 == null || !entityManager1.isOpen()) {
 			entityManager1 = factory.createEntityManager();
-		}
-		if (entityManager2 == null || !entityManager2.isOpen()) {
-			entityManager2 = factory.createEntityManager();
 		}
 		EntityTransaction trans = entityManager1.getTransaction();
 		trans.begin();
@@ -35,10 +31,10 @@ public class WalletRepoImpl implements WalletRepo {
 			trans.commit();
 			return true;
 		} else {
-			entityManager2.persist(customer);
+			entityManager1.persist(customer);
 			Transaction t = new Transaction(customer.getMobileNo(),
 					new java.util.Date() + "\tAccount Created. Balance in A/C : " + customer.getWallet().getBalance());
-			entityManager2.persist(t);
+			entityManager1.persist(t);
 			trans.commit();
 			return true;
 		}
@@ -53,7 +49,6 @@ public class WalletRepoImpl implements WalletRepo {
 		EntityTransaction trans = entityManager3.getTransaction();
 		trans.begin();
 		Customer c = entityManager3.find(Customer.class, mobileNo);
-		System.out.println(c);
 		if (c != null) {
 			trans.commit();
 			return c;
@@ -87,7 +82,7 @@ public class WalletRepoImpl implements WalletRepo {
 		}
 		EntityTransaction trans = entityManager5.getTransaction();
 		trans.begin();
-		Query query = entityManager5.createQuery("select t.log from Transaction t where t.mobileNo = :tmobile",
+		Query query = entityManager5.createQuery("select t.log from Transaction t where t.mobileNo = :tmobile ORDER BY t.transactionId DESC",
 				String.class);
 		query.setParameter("tmobile", mobileNo);
 		l = query.getResultList();
